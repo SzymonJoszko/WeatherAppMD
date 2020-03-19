@@ -11,9 +11,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        imageView.setImageResource(R.drawable.ic_wi_day_cloudy)
+        // Przypisanie stałych ikon do imageView
         imageViewThermometer.setImageResource(R.drawable.ic_wi_thermometer)
         imageViewCelsius.setImageResource(R.drawable.ic_wi_celsius)
         imageViewBarometer.setImageResource(R.drawable.ic_wi_barometer)
+        imageViewSunrise.setImageResource(R.drawable.ic_wi_sunrise)
+        imageViewSunset.setImageResource(R.drawable.ic_wi_sunset)
+        imageViewTime2.setImageResource(R.drawable.ic_wi_time_2)
+
+        // Przykładowa pogoda
+        imageView.setImageResource(R.drawable.ic_wi_day_cloudy)
     }
 }
