@@ -1,5 +1,6 @@
 package com.example.weatherappmd
 
+import android.util.Log
 import android.widget.ImageView
 import androidx.databinding.Bindable
 import androidx.databinding.BindingAdapter
@@ -15,6 +16,17 @@ class MainActivityViewModel : ViewModel() {
         get() = model.description
     val image : LiveData<String>
         get() = model.image
+    val temperature : LiveData<String>
+        get() = model.temperature
+    val pressure : LiveData<String>
+        get() = model.pressure
+    val sunrise : LiveData<String>
+        get() = model.sunrise
+    val sunset : LiveData<String>
+        get() = model.sunset
+    val dt : LiveData<String>
+        get() = model.dt
+
     @Bindable
     val cityName = MutableLiveData<String>()
 

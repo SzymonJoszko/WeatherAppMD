@@ -91,7 +91,7 @@
         android:layout_marginTop="16dp"
         android:tint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textViewThemperature"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTemperature"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewDescription"
@@ -99,12 +99,12 @@
         tools:srcCompat="@drawable/ic_wi_thermometer" />
 
     <TextView
-        android:id="@+id/textViewThemperature"
+        android:id="@+id/textViewTemperature"
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="21,3"
+        android:text="@{viewmodel.temperature}"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="66dp"
@@ -124,7 +124,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textViewThemperature"
+        app:layout_constraintStart_toEndOf="@+id/textViewTemperature"
         app:layout_constraintTop_toBottomOf="@+id/textViewDescription"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_wi_celsius" />
@@ -139,7 +139,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewThemperature"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTemperature"
         app:layout_constraintVertical_bias="0.25"
         tools:srcCompat="@drawable/ic_wi_barometer" />
 
@@ -149,7 +149,7 @@
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="1000 hPa"
+        android:text="@{viewmodel.pressure}"
         android:textAlignment="textStart"
         android:textColor="@color/colorPrimary"
         android:textSize="20dp"
@@ -157,7 +157,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageViewBarometer"
-        app:layout_constraintTop_toBottomOf="@+id/textViewThemperature"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTemperature"
         app:layout_constraintVertical_bias="0.25" />
 
     <ImageView
@@ -182,7 +182,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="05:20"
+        android:text="@{viewmodel.sunrise}"
         android:textAlignment="textStart"
         android:textColor="@color/colorPrimary"
         android:textSize="20dp"
@@ -215,7 +215,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="21:20"
+        android:text="@{viewmodel.sunset}"
         android:textAlignment="textStart"
         android:textColor="@color/colorPrimary"
         android:textSize="20dp"
@@ -248,7 +248,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="17:25 16.03.2020"
+        android:text="@{viewmodel.dt}"
         android:textAlignment="textStart"
         android:textColor="@color/colorPrimary"
         android:textSize="20dp"

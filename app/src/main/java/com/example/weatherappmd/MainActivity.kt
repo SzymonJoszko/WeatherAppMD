@@ -2,6 +2,7 @@ package com.example.weatherappmd
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         // Zmiana ikonki pogody
         mainViewModel.image.observe(this, Observer {
-            imageView.setImageResource(resources.getIdentifier("s"+mainViewModel.image.value, "drawable", packageName))
+            imageView.setImageResource(resources.getIdentifier(mainViewModel.image.value, "drawable", packageName))
         })
 
         // Przypisanie stałych ikon do imageView
