@@ -18,7 +18,5 @@ class MainActivityViewModel : ViewModel() {
     @Bindable
     val cityName = MutableLiveData<String>()
 
-    fun cityNameApproved() {
-        model.cityNameApproved(cityName.value)
-    }
+    fun cityNameApproved() = model.cityNameApproved(cityName.value)
 }
